@@ -37,6 +37,7 @@ echo "runnning. please wait...\n";
 $begin = microtime(true);
 
 $p = new ParallelFor();
+$p->setNumChilds(4);
 $result = $p->run($data, $executor);
 
 echo "parallel: " . (microtime(true) - $begin) . " sec\n";
