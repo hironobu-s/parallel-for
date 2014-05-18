@@ -9,7 +9,7 @@ $executor = function($data, $opt) {
     foreach($data as $value) {
         $result[] = $value;
         
-        // Wait 500 ms from 100ms.
+        // Wait some seconds.
         // It simulate long processing time task.
         $wait = mt_rand(1, 5) * 100000;
         usleep($wait);
