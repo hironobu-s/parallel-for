@@ -9,9 +9,9 @@ $executor = function($data, $opt) {
     foreach($data as $value) {
         $result[] = $value;
         
-        // Wait some seconds.
+        // Wait 100ms.
         // It simulate long processing time task.
-        $wait = mt_rand(1, 5) * 100000;
+        $wait = 100000;
         usleep($wait);
     }
     return $result;
@@ -20,7 +20,7 @@ $executor = function($data, $opt) {
 
 // prepare source data.
 $data = array();
-for($i = 0; $i < 30; $i++) {
+for($i = 0; $i < 50; $i++) {
     $data[] = $i;
 }
 
